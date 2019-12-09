@@ -20,7 +20,7 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.4, random_
 
 # Simple SVM
 print('fitting...')
-clf = SVC(C=20.0, gamma=0.00001)
+clf = SVC(C=20.0, gamma=0.0001, kernel= 'rbf')
 clf.fit(X_train, y_train)
 acc = clf.score(X_test, y_test)
 print("acc=%0.3f" % acc)
